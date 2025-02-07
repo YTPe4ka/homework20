@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 .active {
-  color: red;
+  color: rgb(0, 72, 255);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

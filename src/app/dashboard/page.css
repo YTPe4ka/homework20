@@ -1,0 +1,12 @@
+.name{
+    color: blue;
+}
+
+
+.Main{
+    font-size: 50px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    gap: 16px;
+}

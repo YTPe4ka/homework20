@@ -1,7 +1,4 @@
 "use client";
-
-
-
 import React from "react";
 import { baseUrl } from "@/utils/api";
 import axios from "axios";
@@ -23,7 +20,7 @@ function Register() {
         password,
       });
       if (res.status === 200) {
-        localStorage.setItem("accessToken", res.data.token);
+        localStorage.setItem("token", res.data.token);
         route.push("/dashboard");
       }
       console.log(res);
@@ -31,7 +28,7 @@ function Register() {
       console.log(error);
     }
   };
-  if (localStorage.getItem("accessToken")) {
+  if (localStorage.getItem("token")) {
     route.push("/dashboard");
 }
 

@@ -7,7 +7,7 @@ import React from "react";
 
 function Login() {
   //   console.log(baseUrl, "tttttttttttttttttttt");
-  const route = useRouter();
+  const route = useRouter();  
 
   const onSubmits = async (e) => {
     e.preventDefault();
@@ -19,7 +19,7 @@ function Login() {
         password,
       });
       if (res.status === 200) {
-        localStorage.setItem("accessToken", res.data.token);
+        localStorage.setItem("token", res.data.token);
         route.push("/dashboard");
       }
       console.log(res);
@@ -28,7 +28,7 @@ function Login() {
     }
     // console.log(email, password);
   };
-  if (localStorage.getItem("accessToken")) {
+  if (localStorage.getItem("token")) {
     route.push("/dashboard");
   }
   return (
