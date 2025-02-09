@@ -69,7 +69,7 @@ function createprofile() {
     try {
       let res = await axios.post(
         `${baseUrl}/profile`,
-        {
+        {   
           headers: {
             'x-auth-token': localStorage.getItem('token'),
           },
